@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Hello, javascript!</h1>
+    </div>
+
+    <script>
+      const getRandomColor = () => {
+        //const hexa = "0123456789abcdef";
+        var ran1 = Math.floor(Math.random() * 226);
+        var ran2 = Math.floor(Math.random() * 226);
+        var ran3 = Math.floor(Math.random() * 226);
+        const colorR = ran1.toString(16);
+        const colorG = ran2.toString(16);
+        const colorB = ran3.toString(16);
+        const colorName = `#${colorR}${colorG}${colorB}`;
+        return colorName;
+      };
+
+      setInterval(() => {
+        document.querySelector("body").style.background = getRandomColor();
+      }, 100);
+    </script>
+  </body>
+</html>
